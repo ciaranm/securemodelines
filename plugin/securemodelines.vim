@@ -143,6 +143,6 @@ endfun
 
 aug SecureModeLines
     au!
-    au BufRead * :call <SID>DoModelines()
+    au BufRead,StdinReadPost * :call <SID>DoModelines()
 aug END
 
