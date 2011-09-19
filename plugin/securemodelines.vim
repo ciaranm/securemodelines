@@ -22,6 +22,9 @@ if (! exists("g:secure_modelines_allowed_items"))
                 \ "foldmethod",  "fdm",
                 \ "readonly",    "ro",   "noreadonly", "noro",
                 \ "rightleft",   "rl",   "norightleft", "norl",
+                \ "cindent",     "cin",  "nocindent", "nocin",
+                \ "smartindent", "si",   "nosmartindent", "nosi",
+                \ "autoindent",  "ai",   "noautoindent", "noai",
                 \ "spell",
                 \ "spelllang"
                 \ ]
