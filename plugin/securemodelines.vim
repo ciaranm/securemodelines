@@ -50,12 +50,7 @@ if (! exists("g:secure_modelines_leave_modeline"))
 endif
 
 fun! <SID>IsInList(list, i) abort
-    for l:item in a:list
-        if a:i == l:item
-            return 1
-        endif
-    endfor
-    return 0
+    return index(a:list, a:i) != -1
 endfun
 
 fun! <SID>DoOne(item) abort
