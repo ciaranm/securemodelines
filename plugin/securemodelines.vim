@@ -25,7 +25,7 @@ if (! exists("g:secure_modelines_allowed_items"))
                 \ "cindent",     "cin",  "nocindent", "nocin",
                 \ "smartindent", "si",   "nosmartindent", "nosi",
                 \ "autoindent",  "ai",   "noautoindent", "noai",
-                \ "spell",
+                \ "spell", "nospell",
                 \ "spelllang"
                 \ ]
 endif
