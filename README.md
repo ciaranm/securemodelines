@@ -1,10 +1,6 @@
 # securemodelines
 A secure alternative to Vim modelines
 
-vim.org: http://www.vim.org/scripts/script.php?script_id=1876
-
-script type: utility
- 
 Vim's internal modeline support allows all sorts of annoying and potentially insecure options to be set. This script implements a much more heavily restricted modeline parser that permits only user-specified options to be set. 
 
 The g:secure_modelines_allowed_items array contains allowable options. By default it is set as follows: 
@@ -27,8 +23,6 @@ The `g:secure_modelines_modelines` option overrides the number of lines to check
 
 If `g:secure_modelines_leave_modeline` is defined, the script will not clobber &modeline. Otherwise &modeline will be unset. 
 
-Keeping things up to date on vim.org is a nuisance. For the latest version, visit: 
-
-    http://github.com/ciaranm/securemodelines
- 
 Install into your plugin directory of choice.
+
+vim.org: http://www.vim.org/scripts/script.php?script_id=1876
