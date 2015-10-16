@@ -1,0 +1,55 @@
+*securemodelines.txt* A secure alternative to Vim modelines
+
+vim.org: http://www.vim.org/scripts/script.php?script_id=1876
+
+For the latest version, visit: http://github.com/ciaranm/securemodelines
+
+Author: Ciaran McCreesh
+ 
+==============================================================================
+0. Contents                                            *securemodelines-toc*
+
+        1.  Functionality...........................: |securemodelines-plugin|
+        2.  Options.................................: |securemodelines-options|
+
+==============================================================================
+                                                       *securemodelines-plugin*
+
+1.  Functionality
+
+Vim's internal modeline support allows all sorts of annoying and
+potentially insecure options to be set. This script implements a much
+more heavily restricted modeline parser that permits only user-specified
+options to be set.
+
+                                                   *g:securemodelines-options*
+2.  Options
+
+The g:secure_modelines_allowed_items array contains allowable options.
+By default it is set as follows:
+
+    let g:secure_modelines_allowed_items = [ 
+                \ "textwidth",   "tw", 
+                \ "softtabstop", "sts", 
+                \ "tabstop",     "ts", 
+                \ "shiftwidth",  "sw", 
+                \ "expandtab",   "et",   "noexpandtab", "noet", 
+                \ "filetype",    "ft", 
+                \ "foldmethod",  "fdm", 
+                \ "readonly",    "ro",   "noreadonly", "noro", 
+                \ "rightleft",   "rl",   "norightleft", "norl" 
+                \ ] 
+
+The g:secure_modelines_verbose option, if set to something true, will
+make the script warn when a modeline attempts to set any other option.
+
+The g:secure_modelines_modelines option overrides the number of lines to
+check. By default it is 5.
+
+If g:secure_modelines_leave_modeline is defined, the script will not
+clobber &modeline. Otherwise &modeline will be unset.
+
+Install into your plugin directory of choice.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help
