@@ -9,11 +9,12 @@ Author: Ciaran McCreesh
 ==============================================================================
 0. Contents                                            *securemodelines-toc*
 
-        1.  Functionality...........................: |securemodelines-plugin|
-        2.  Options.................................: |securemodelines-options|
+        1.  Functionality..........................: |securemodelines-plugin|
+        2.  Plugin settings........................: |securemodelines-settings|
+        2.1 Allowed modeline options...............: |securemodelines_options|
 
 ==============================================================================
-                                                       *securemodelines-plugin*
+                                                      *securemodelines-plugin*
 
 1.  Functionality
 
@@ -22,29 +23,35 @@ potentially insecure options to be set. This script implements a much
 more heavily restricted modeline parser that permits only user-specified
 options to be set.
 
-                                                   *g:securemodelines-options*
+                                                    *securemodelines-settings*
 2.  Options
 
-The g:secure_modelines_allowed_items array contains allowable options.
+The g:secure_modelines_allowed_items array contains allowed options.
 By default it is set as follows:
 
-    let g:secure_modelines_allowed_items = [ 
-                \ "textwidth",   "tw", 
-                \ "softtabstop", "sts", 
-                \ "tabstop",     "ts", 
-                \ "shiftwidth",  "sw", 
-                \ "expandtab",   "et",   "noexpandtab", "noet", 
-                \ "filetype",    "ft", 
-                \ "foldmethod",  "fdm", 
-                \ "readonly",    "ro",   "noreadonly", "noro", 
-                \ "rightleft",   "rl",   "norightleft", "norl" 
-                \ ] 
+                                                     *securemodelines_options*
+    let g:secure_modelines_allowed_items = [
+                \ "textwidth",   "tw",
+                \ "softtabstop", "sts",
+                \ "tabstop",     "ts",
+                \ "shiftwidth",  "sw",
+                \ "expandtab",   "et",   "noexpandtab", "noet",
+                \ "filetype",    "ft",
+                \ "foldmethod",  "fdm",
+                \ "readonly",    "ro",   "noreadonly", "noro",
+                \ "rightleft",   "rl",   "norightleft", "norl",
+                \ "cindent",     "cin",  "nocindent", "nocin",
+                \ "smartindent", "si",   "nosmartindent", "nosi",
+                \ "autoindent",  "ai",   "noautoindent", "noai",
+                \ "spell", "nospell",
+                \ "spelllang"
+                \ ]
 
-The g:secure_modelines_verbose option, if set to something true, will
+The g:secure_modelines_verbose variable, if set to something true, will
 make the script warn when a modeline attempts to set any other option.
 
-The g:secure_modelines_modelines option overrides the number of lines to
-check. By default it is 5.
+The g:secure_modelines_modelines variable overrides the number of lines
+to check. By default it is 5.
 
 If g:secure_modelines_leave_modeline is defined, the script will not
 clobber &modeline. Otherwise &modeline will be unset.
