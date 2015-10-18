@@ -13,21 +13,22 @@ let g:loaded_securemodelines = 1
 
 if (! exists("g:secure_modelines_allowed_items"))
     let g:secure_modelines_allowed_items = [
-                \ "textwidth",       "tw",
-                \ "softtabstop",     "sts",
-                \ "tabstop",         "ts",
-                \ "shiftwidth",      "sw",
-                \ "expandtab",       "et",        "noexpandtab",    "noet",
-                \ "filetype",        "ft",
-                \ "foldmethod",      "fdm",
-                \ "readonly",        "ro",        "noreadonly",     "noro",
-                \ "rightleft",       "rl",        "norightleft",    "norl",
-                \ "cindent",         "cin",       "nocindent",      "nocin",
-                \ "smartindent",     "si",        "nosmartindent",  "nosi",
-                \ "autoindent",      "ai",        "noautoindent",   "noai",
-                \ "spell",           "nospell",
-                \ "spelllang"
-                \ ]
+        \ "textwidth",       "tw",
+        \ "softtabstop",     "sts",
+        \ "tabstop",         "ts",
+        \ "shiftwidth",      "sw",
+        \ "expandtab",       "et",        "noexpandtab",    "noet",
+        \ "filetype",        "ft",
+        \ "foldmethod",      "fdm",
+        \ "formatoptions",   "fo",
+        \ "readonly",        "ro",        "noreadonly",     "noro",
+        \ "rightleft",       "rl",        "norightleft",    "norl",
+        \ "cindent",         "cin",       "nocindent",      "nocin",
+        \ "smartindent",     "si",        "nosmartindent",  "nosi",
+        \ "autoindent",      "ai",        "noautoindent",   "noai",
+        \ "spell",           "nospell",
+        \ "spelllang"
+        \ ]
 endif
 
 if (! exists("g:secure_modelines_verbose"))

@@ -30,22 +30,23 @@ The g:secure_modelines_allowed_items array contains allowed options.
 By default it is set as follows:
 
                                                      *securemodelines_options*
-    let g:secure_modelines_allowed_items = [
-                \ "textwidth",   "tw",
-                \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
-                \ "shiftwidth",  "sw",
-                \ "expandtab",   "et",   "noexpandtab", "noet",
-                \ "filetype",    "ft",
-                \ "foldmethod",  "fdm",
-                \ "readonly",    "ro",   "noreadonly", "noro",
-                \ "rightleft",   "rl",   "norightleft", "norl",
-                \ "cindent",     "cin",  "nocindent", "nocin",
-                \ "smartindent", "si",   "nosmartindent", "nosi",
-                \ "autoindent",  "ai",   "noautoindent", "noai",
-                \ "spell", "nospell",
-                \ "spelllang"
-                \ ]
+let g:secure_modelines_allowed_items = [
+    \ "textwidth",       "tw",
+    \ "softtabstop",     "sts",
+    \ "tabstop",         "ts",
+    \ "shiftwidth",      "sw",
+    \ "expandtab",       "et",        "noexpandtab",    "noet",
+    \ "filetype",        "ft",
+    \ "foldmethod",      "fdm",
+    \ "formatoptions",   "fo",
+    \ "readonly",        "ro",        "noreadonly",     "noro",
+    \ "rightleft",       "rl",        "norightleft",    "norl",
+    \ "cindent",         "cin",       "nocindent",      "nocin",
+    \ "smartindent",     "si",        "nosmartindent",  "nosi",
+    \ "autoindent",      "ai",        "noautoindent",   "noai",
+    \ "spell",           "nospell",
+    \ "spelllang"
+    \ ]
 
 The g:secure_modelines_verbose variable, if set to something true, will
 make the script warn when a modeline attempts to set any other option.
