@@ -13,21 +13,23 @@ let g:loaded_securemodelines = 1
 
 if (! exists("g:secure_modelines_allowed_items"))
     let g:secure_modelines_allowed_items = [
-                \ "textwidth",   "tw",
-                \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
-                \ "shiftwidth",  "sw",
-                \ "expandtab",   "et",   "noexpandtab", "noet",
-                \ "filetype",    "ft",
-                \ "foldmethod",  "fdm",
-                \ "readonly",    "ro",   "noreadonly", "noro",
-                \ "rightleft",   "rl",   "norightleft", "norl",
-                \ "cindent",     "cin",  "nocindent", "nocin",
-                \ "smartindent", "si",   "nosmartindent", "nosi",
-                \ "autoindent",  "ai",   "noautoindent", "noai",
-                \ "spell", "nospell",
-                \ "spelllang"
-                \ ]
+        \ "textwidth",       "tw",
+        \ "softtabstop",     "sts",
+        \ "tabstop",         "ts",
+        \ "shiftwidth",      "sw",
+        \ "expandtab",       "et",        "noexpandtab",    "noet",
+        \ "filetype",        "ft",
+        \ "foldmethod",      "fdm",
+        \ "foldmarker",      "fmr",
+        \ "formatoptions",   "fo",
+        \ "readonly",        "ro",        "noreadonly",     "noro",
+        \ "rightleft",       "rl",        "norightleft",    "norl",
+        \ "cindent",         "cin",       "nocindent",      "nocin",
+        \ "smartindent",     "si",        "nosmartindent",  "nosi",
+        \ "autoindent",      "ai",        "noautoindent",   "noai",
+        \ "spell",           "nospell",
+        \ "spelllang"
+        \ ]
 endif
 
 if (! exists("g:secure_modelines_verbose"))
@@ -54,7 +56,7 @@ fun! <SID>IsInList(list, i) abort
 endfun
 
 fun! <SID>DoOne(item) abort
-    let l:matches = matchlist(a:item, '^\([a-z]\+\)\%([-+^]\?=[a-zA-Z0-9_\-,.]\+\)\?$')
+    let l:matches = matchlist(a:item, '^\([a-z]\+\)\%([-+^]\?=[a-zA-Z0-9_\-,.\[\]]\+\)\?$')
     if len(l:matches) > 0
         if <SID>IsInList(g:secure_modelines_allowed_items, l:matches[1])
             exec "setlocal " . a:item
